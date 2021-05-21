@@ -31,8 +31,8 @@ class AriaDownloadHelper(DownloadHelper):
             gdrive = GoogleDriveHelper(None)
             smsg, button = gdrive.drive_list(sname)
           if smsg:
-              dl.getListener().onDownloadError(f'🤬File is already available in Drive🤬.\n\n')
-              sendMarkup("🥶Here are the search results:👇", dl.getListener().bot, dl.getListener().update, button)
+              dl.getListener().onDownloadError(f'🤬File is ɑlreɑdy ɑvɑilɑble in TeɑmDrive🤬.\n\n')
+              sendMarkup("🥶Here ɑre the seɑrch results:👇", dl.getListener().bot, dl.getListener().update, button)
               aria2.remove([download])
               return
 
@@ -66,13 +66,13 @@ class AriaDownloadHelper(DownloadHelper):
     def __onDownloadPause(self, api, gid):
         LOGGER.info(f"onDownloadPause: {gid}")
         dl = getDownloadByGid(gid)
-        dl.getListener().onDownloadError('Download stopped by user❗️🥺')
+        dl.getListener().onDownloadError('𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃  𝐂𝐀𝐍𝐂𝐄𝐋𝐄𝐃 𝐁𝐘 𝐔𝐒𝐄𝐑❗️🥺')
 
     @new_thread
     def __onDownloadStopped(self, api, gid):
         LOGGER.info(f"onDownloadStop: {gid}")
         dl = getDownloadByGid(gid)
-        if dl: dl.getListener().onDownloadError('Dead torrent❗️🤣')
+        if dl: dl.getListener().onDownloadError('𝐃𝐄𝐀𝐃 𝐓𝐎𝐑𝐑𝐄𝐍𝐓┃𝐌𝐀𝐆𝐍𝐄𝐓❗️🤣')
 
     @new_thread
     def __onDownloadError(self, api, gid):
