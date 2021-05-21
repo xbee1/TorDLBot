@@ -148,7 +148,7 @@ class YoutubeDLHelper(DownloadHelper):
             self.__onDownloadComplete()
         except ValueError:
             LOGGER.info("Download Cancelled by User!")
-            self.onDownloadError("Download Cancelled by User❗️🥺")
+            self.onDownloadError("𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃 𝐂𝐀𝐍𝐂𝐄𝐋𝐄𝐃 𝐁𝐘 𝐔𝐒𝐄𝐑🥺❗️")
 
     def add_download(self, link, path, qual, name):
         pattern = '^.*(youtu\.be\/|youtube.com\/)(playlist?)'
