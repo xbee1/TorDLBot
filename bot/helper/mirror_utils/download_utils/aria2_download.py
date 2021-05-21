@@ -66,7 +66,7 @@ class AriaDownloadHelper(DownloadHelper):
     def __onDownloadPause(self, api, gid):
         LOGGER.info(f"onDownloadPause: {gid}")
         dl = getDownloadByGid(gid)
-        dl.getListener().onDownloadError('𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃  𝐂𝐀𝐍𝐂𝐄𝐋𝐄𝐃 𝐁𝐘 𝐔𝐒𝐄𝐑❗️🥺')
+        dl.getListener().onDownloadError('𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃 𝐂𝐀𝐍𝐂𝐄𝐋𝐄𝐃 𝐁𝐘 𝐔𝐒𝐄𝐑❗️🥺')
 
     @new_thread
     def __onDownloadStopped(self, api, gid):
