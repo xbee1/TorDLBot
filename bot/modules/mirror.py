@@ -263,7 +263,7 @@ def _mirror(bot, update, isTar=False, extract=False):
     else:
         tag = None
     if not bot_utils.is_url(link) and not bot_utils.is_magnet(link):
-        sendMessage('No download source provided', bot, update)
+        sendMessage('𝙽𝚘 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝚜𝚘𝚞𝚛𝚌𝚎 𝚙𝚛𝚘𝚟𝚒𝚍𝚎𝚍🤨', bot, update)
         return
 
     try:
