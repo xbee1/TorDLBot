@@ -54,8 +54,8 @@ def stats(update, context):
 @run_async
 def start(update, context):
     start_string = f'''
-This bot can mirror all your links to Google drive🔰❗️ Engine qBittorrent⚡️
-Type /{BotCommands.HelpCommand} to get a list of available commands
+𝚃𝚑𝚒𝚜 𝚋𝚘𝚝 𝚌𝚊𝚗 𝚖𝚒𝚛𝚛𝚘𝚛 𝚊𝚕𝚕 𝚢𝚘𝚞𝚛 𝚕𝚒𝚗𝚔𝚜 𝚝𝚘 𝙶𝚘𝚘𝚐𝚕𝚎 𝚍𝚛𝚒𝚟𝚎🔰❗️ 𝐄𝐍𝐆𝐢𝐍𝐄-𝐪𝐁𝐢𝐭𝐭𝐎𝐫𝐫𝐞𝐧𝐭⚡️
+𝚝𝚢𝚙𝚎 /{BotCommands.HelpCommand} 𝚝𝚘 𝚐𝚎𝚝 𝚊 𝚕𝚒𝚜𝚝 𝚘𝚏 𝚊𝚟𝚊𝚒𝚕𝚊𝚋𝚕𝚎 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜😌
 '''
     update.effective_message.reply_photo(IMAGE_URL, start_string, parse_mode=ParseMode.MARKDOWN)
 
@@ -63,8 +63,8 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
 @run_async
 def repo(update, context):
     button = [
-    [InlineKeyboardButton("🛠 OWNER 🛠", url=f"https://t.me/ANonYmoUS_FriEND")],
-    [InlineKeyboardButton("🛠 OWNER 🛠", url=f"https://t.me/ANonYmoUS_FriEND")]]
+    [InlineKeyboardButton("🛠 𝕆𝕎ℕ𝔼ℝ 🛠", url=f"https://t.me/ANonYmoUS_FriEND")],
+    [InlineKeyboardButton("🛠 𝐎𝐖𝐍𝐄𝐑 🛠", url=f"https://t.me/ANonYmoUS_FriEND")]]
     reply_markup = InlineKeyboardMarkup(button)
     update.effective_message.reply_photo(IMAGE_URL, reply_markup=reply_markup)
 
@@ -83,7 +83,7 @@ def restart(update, context):
 @run_async
 def ping(update, context):
     start_time = int(round(time.time() * 1000))
-    reply = sendMessage("Starting Ping🖲", context.bot, update)
+    reply = sendMessage("𝕊𝕥𝕒𝕣𝕥𝕚𝕟𝕘 ℙ𝕚𝕟𝕘🖲", context.bot, update)
     end_time = int(round(time.time() * 1000))
     editMessage(f'{end_time - start_time} ms', reply)
 
