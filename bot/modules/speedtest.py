@@ -9,7 +9,7 @@ from telegram.ext import CallbackContext, Filters, run_async, CommandHandler
 @run_async
 def speedtest(update, context):
     message = update.effective_message
-    ed_msg = message.reply_text("🏃‍♂Running Speed Test💨 . . . ")
+    ed_msg = message.reply_text("🏃‍♂💨𝐑𝐮𝐧𝐧𝐢𝐧𝐠 𝐒𝐩𝐞𝐞𝐝 𝐓𝐞𝐬𝐭 . . . . . . ")
     test = Speedtest()
     test.get_best_server()
     test.download()
@@ -18,16 +18,16 @@ def speedtest(update, context):
     result = test.results.dict()
     path = (result['share'])
     string_speed = f'''
-<b>📟Server Using Engine Aria2⚡️</b>
-<b>📡Name:</b> <code>{result['server']['name']}</code>
-<b>🕹Country:</b> <code>{result['server']['country']}, {result['server']['cc']}</code>
-<b>💶Sponsor:</b> <code>{result['server']['sponsor']}</code>
+<b>╭──📟𝕊𝕖𝕣𝕧𝕖𝕣 𝕌𝕤𝕚𝕟𝕘 𝔼𝕟𝕘𝕚𝕟𝕖 𝔸𝕣𝕚𝕒𝟚⚡️</b>
+<b>├📡𝐍𝐚𝐦𝐞:</b> <code>{result['server']['name']}</code>
+<b>├🕹𝐂𝐨𝐮𝐧𝐭𝐫𝐲:</b> <code>{result['server']['country']}, {result['server']['cc']}</code>
+<b>╰💶𝐒𝐩𝐨𝐧𝐬𝐨𝐫:</b> <code>{result['server']['sponsor']}</code>
     
-<b>🚀SpeedTest Results💨</b>
-<b>🔺Upload:</b> <code>{speed_convert(result['upload'] / 8)}</code>
-<b>🔻Download:</b>  <code>{speed_convert(result['download'] / 8)}</code>
-<b>🖲Ping:</b> <code>{result['ping']} ms</code>
-<b>🏬ISP:</b> <code>{result['client']['isp']}</code>
+<b>╭────🚀𝕊𝕡𝕖𝕖𝕕𝕋𝕖𝕤𝕥 ℝ𝕖𝕤𝕦𝕝𝕥𝕤💨</b>
+<b>├🔺𝐔𝐩𝐥𝐨𝐚𝐝:</b> <code>{speed_convert(result['upload'] / 8)}</code>
+<b>├🔻𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝:</b>  <code>{speed_convert(result['download'] / 8)}</code>
+<b>├🖲𝐏𝐢𝐧𝐠:</b> <code>{result['ping']} ms</code>
+<b>╰🏬𝐢𝐒𝐏:</b> <code>{result['client']['isp']}</code>
 '''
     ed_msg.delete()
     try:
