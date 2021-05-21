@@ -21,7 +21,7 @@ def _watch(bot: Bot, update, isTar=False):
         msg += "<b>Note: Quality and custom name are optional</b>\n\nExample of quality: audio, 144, 240, 360, 480, 720, 1080, 2160."
         msg += "\n\nIf you want to use custom filename, plz enter it after |"
         msg += f"\n\nExample:\n<code>/{BotCommands.WatchCommand} https://youtu.be/6ttobrfMnyQ 720 |INNA Bad Boys</code>\n\n"
-        msg += "This file will be downloaded in 720p quality and it's name will be <b>INNA Bad Boys</b>"
+        msg += "𝐓𝐡𝐢𝐬 𝐟𝐢𝐥𝐞 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐝𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐝 𝐢𝐧 𝟕𝟐𝟎𝐩 𝐪𝐮𝐚𝐥𝐢𝐭𝐲 𝐚𝐧𝐝 𝐢𝐭'𝐬 𝐧𝐚𝐦𝐞 𝐰𝐢𝐥𝐥 𝐛𝐞 <b>𝐈𝐍𝐍𝐀 𝐁𝐚𝐝 𝐁𝐨𝐲𝐬</b>"
         sendMessage(msg, bot, update)
         return
     try:
