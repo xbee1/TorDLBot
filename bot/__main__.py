@@ -47,7 +47,7 @@ def stats(update, context):
             f'<b>├─💾𝐑𝐀𝐌:</b> {memory}%\n' \
             f'<b>├─💿𝐃𝐢𝐒𝐊:</b> {disk}%\n' \
             f'<b>│</b>\n' \
-            f'<b>╰──┃🏆@ANonYmoUS_FriEND🏆┃</b>'
+            f'<b>╰─┃🏆@ANonYmoUS_FriEND🏆┃</b>'
     update.effective_message.reply_photo(IMAGE_URL, stats, parse_mode=ParseMode.HTML)
 
 
