@@ -66,13 +66,13 @@ class AriaDownloadHelper(DownloadHelper):
     def __onDownloadPause(self, api, gid):
         LOGGER.info(f"onDownloadPause: {gid}")
         dl = getDownloadByGid(gid)
-        dl.getListener().onDownloadError('𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃 𝐂𝐀𝐍𝐂𝐄𝐋𝐄𝐃 𝐁𝐘 𝐔𝐒𝐄𝐑❗️🥺')
+        dl.getListener().onDownloadError('𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃 𝐂𝐀𝐍𝐂𝐄𝐋𝐄𝐃 𝐁𝐘 𝐔𝐒𝐄𝐑🥺❗️')
 
     @new_thread
     def __onDownloadStopped(self, api, gid):
         LOGGER.info(f"onDownloadStop: {gid}")
         dl = getDownloadByGid(gid)
-        if dl: dl.getListener().onDownloadError('𝐃𝐄𝐀𝐃 𝐓𝐎𝐑𝐑𝐄𝐍𝐓┃𝐌𝐀𝐆𝐍𝐄𝐓❗️🤣')
+        if dl: dl.getListener().onDownloadError('𝐃𝐄𝐀𝐃 𝐓𝐎𝐑𝐑𝐄𝐍𝐓┃𝐌𝐀𝐆𝐍𝐄𝐓🤣🤣')
 
     @new_thread
     def __onDownloadError(self, api, gid):
