@@ -18,7 +18,7 @@ def cancel_mirror(update, context):
         gid = args[1]
         dl = getDownloadByGid(gid)
         if not dl:
-            sendMessage(f"GID: <code>{gid}</code> not found.", context.bot, update)
+            sendMessage(f"🚧GID: <code>{gid}</code> not found❗.", context.bot, update)
             return
         with download_dict_lock:
             keys = list(download_dict.keys())
@@ -37,7 +37,7 @@ def cancel_mirror(update, context):
                 sendMessage(msg, context.bot, update)
                 return
             else:
-                msg = "𝙿𝚕𝚎𝚊𝚜𝚎 𝚛𝚎𝚙𝚕𝚢 𝚝𝚘 𝚝𝚑𝚎 /mirror 𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚠𝚑𝚒𝚌𝚑 𝚠𝚊𝚜 𝚞𝚜𝚎𝚍 𝚝𝚘 𝚜𝚝𝚊𝚛𝚝 𝚝𝚑𝚎 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝚘𝚛 /cancel 𝚐𝚒𝚍 𝚝𝚘 𝚌𝚊𝚗𝚌𝚎𝚕 𝚒𝚝😏❗"
+                msg = "Please reply to the /mirror message which was used to start the download or /cancel gid to cancel it😏❗"
                 sendMessage(msg, context.bot, update)
                 return
     if dl.status() == "Uploading...📤":
@@ -65,7 +65,7 @@ def cancel_all(update, context):
                 dlDetails.download().cancel_download()
                 count += 1
     delete_all_messages()
-    sendMessage(f'𝐂𝐚𝐧𝐜𝐞𝐥𝐥𝐞𝐝 {count} 𝐝𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐬😒❗', context.bot, update)
+    sendMessage(f'Cancelled {count} downloads😒❗', context.bot, update)
 
 
 cancel_mirror_handler = CommandHandler(BotCommands.CancelMirror, cancel_mirror,
